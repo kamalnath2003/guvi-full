@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from'axios';
 import { useNavigate } from "react-router-dom";
-
+import { BASE_URL } from "../services/helper";
 function Signup() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -10,7 +10,7 @@ function Signup() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-   axios.post('http://localhost:3000/register', {name,password,email})
+   axios.post(`${BASE_URL}/register`, {name,password,email})
    .then((result) =>{console.log(result)
     nav('/login')
 

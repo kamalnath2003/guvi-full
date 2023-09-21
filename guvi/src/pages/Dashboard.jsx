@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import axios from "axios";
+import { BASE_URL } from "../services/helper";
 
 function dashboard() {
   const { id } = useParams();
@@ -16,9 +17,9 @@ function dashboard() {
   const [user, setUser] = useState([]);
   const nav = useNavigate();
 
-  useEffect(() => {
+  useEffect(  () => {
     axios
-      .get("http://localhost:3000/getuser/" + id)
+      .get(`${BASE_URL}/getuser/` + id)
       .then((result) => {
         console.log(result.data);
         setEmail(result.data.email);

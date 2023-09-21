@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import axios from "axios";
+import { BASE_URL } from "../services/helper";
 
 function Update() {
   const { id } = useParams();
@@ -17,7 +18,7 @@ function Update() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/getuser/" + id)
+      .get(`${BASE_URL}/getuser/` + id)
       .then((result) => {
         console.log(result.data);
         setEmail(result.data.email);
@@ -36,7 +37,7 @@ function Update() {
     console.log("start");
     e.preventDefault();
     axios
-      .put("http://localhost:3000/update/" + id, {
+      .put(`${BASE_URL}/update/` + id, {
         name,
         email,
         password,
@@ -53,7 +54,7 @@ function Update() {
   };
   const handleDelete = (id) => {
     axios
-      .delete("http://localhost:3000/delete/" + id)
+      .delete(`${BASE_URL}/delete/` + id)
       .then((result) => {
         console.log(result);
         nav("/signup");
