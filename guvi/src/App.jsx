@@ -6,7 +6,7 @@ import{BrowserRouter,Routes,Route} from 'react-router-dom'
 import Login from './pages/Login'
 import Home from './pages/Home'
 import Dashboard from './pages/Dashboard'
-import Update from './pages/update'
+import Update from './pages/Update'
 import Nav from './assets/Nav'
 
 function App() {

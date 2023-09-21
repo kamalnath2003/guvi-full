@@ -1,5 +1,5 @@
 import React from 'react'
-import Signup from './signup'
+import Signup from './Signup'
 
 function Home() {
   return (
