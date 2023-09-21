@@ -13,7 +13,7 @@ function Nav() {
     </button>
     <div class="collapse navbar-collapse " style={{marginLeft:''}} id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item"><Link to={'/home'}><a class="nav-link active" aria-current="page" href="#">Home</a></Link>
+        <li class="nav-item"><Link to={'/'}><a class="nav-link active" aria-current="page" href="#">Home</a></Link>
           
         </li>
         <li class="nav-item"><Link to={'/login'}><a class="nav-link">Login</a></Link>
