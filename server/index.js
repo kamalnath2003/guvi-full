@@ -67,6 +67,6 @@ app.put("/update/:id", (req, res) => {
     .catch((err) => console.log(err));
 });
 
-app.listen(3000, (req, res) => {
+app.listen(3000,'0.0.0.0', (req, res) => {
   console.log("mongo works");
 });
