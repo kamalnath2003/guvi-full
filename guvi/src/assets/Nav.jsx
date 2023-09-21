@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 
 function Nav() {
   return (
@@ -14,8 +16,8 @@ function Nav() {
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/login">Login</a>
+        <li class="nav-item"><Link to={'/login'}><a class="nav-link">Login</a></Link>
+          
           
         </li>
         <li class="nav-item">
